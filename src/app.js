@@ -1,6 +1,6 @@
 const express = require('express');
 const { loginController } = require('./controllers');
-const { userRoutes } = require('./routes');
+const { userRoutes, categoryRoutes } = require('./routes');
 
 // ...
 
@@ -15,6 +15,7 @@ app.use(express.json());
 
 app.post('/login', loginController.logIn);
 app.use('/user', userRoutes);
+app.use('/categories', categoryRoutes);
 // ...
 
 // É importante exportar a constante `app`,
