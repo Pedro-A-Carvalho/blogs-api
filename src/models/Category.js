@@ -10,7 +10,6 @@ const categoryModel = (sequelize, DataTypes) => {
         tableName: 'categories',
         timestamps: false,
     });
-  
     return Category;
   };
   
